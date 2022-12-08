@@ -9,6 +9,10 @@
   "keywords": [],
   "author": "Harsh.Ajudia",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Harsh-Ajudia/mongodb.git"
+  },
   "dependencies": {
     "mongodb": "^3.7.1"
   }
