@@ -9,6 +9,7 @@ const find = (collection = "", query = {}, projection = {}, options = {}) => {
     if (options.limit) {
         const page = Math.abs(options.page ? options.page : 1)
         combine.skip = (page - 1) * options.limit
+        combine.limit = Number(options.limit)
     }
     if (options.sort) {
         combine.sort = { [options.sort]: options.order == 'desc' ? -1 : 1 }
