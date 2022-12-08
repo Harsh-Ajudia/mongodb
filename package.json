@@ -1,5 +1,5 @@
 {
-  "name": "@ril-commons/mongodb",
+  "name": "commons-mongodb-crud",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -7,11 +7,11 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "Harsh.Ajudia",
+  "author": "",
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Harsh-Ajudia/mongodb.git"
+    "url": ""
   },
   "dependencies": {
     "mongodb": "^3.7.1"

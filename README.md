@@ -1,9 +1,9 @@
-# Ril Commons - MongoDB
+# Commons - MongoDB
 
 ## Contents
 
-1. [Connection](#mongo-connection)
-2. [CRUD Operations](#mongo-crud-operations)
+1. [Connection](#connection)
+2. [CRUD Operations](#crud-operations)
 
 ## Connection
 
@@ -12,7 +12,7 @@ To connect to the mongo database call connectToServer method and pass in uri and
 This will return 2 parameters status and message. If status is true that means you are connected.
 
 ```js
-const { connections: mongoConn } = require('@ril-commons/mongodb')
+const { connections: mongoConn } = require('commons-mongodb-crud')
 
 const res = await mongoConn.connectToServer("mongodb://localhost", {})
 
@@ -27,7 +27,7 @@ Once connected you get status flag. Now you can utilize the same connection anyw
 To do so use **getDb()** function to get the connection.
 
 ```js
-const { connections: mongoConn } = require('@ril-commons/mongodb')
+const { connections: mongoConn } = require('commons-mongodb-crud')
 
 const connectionObj = mongoConn.getDb()
 // further use connectionObj to run any query
@@ -38,7 +38,7 @@ __Close database connection on app shutdown__
 This is important part of the connection. Use closeConnections() method if there is no requirement of using mysql connection or during graceful shutdown
 
 ```js
-const { connections: mongoConn } = require('@ril-commons/mongodb')
+const { connections: mongoConn } = require('commons-mongodb-crud')
 
 mongoConn.closeConnections()
 ```
@@ -54,7 +54,7 @@ To run a query against the given database use runQuery() method of mysqlCrud
 - **projection:** In order to get only the required fields in response the projection object can be passed
 
 ```js
-const { crud } = require('@ril-commons/mongodb')
+const { crud } = require('commons-mongodb-crud')
 
 const findRes = await crud.find(collection, query, projection, options)
 // options: To customize the documents options is used. Currently the below options are supported
